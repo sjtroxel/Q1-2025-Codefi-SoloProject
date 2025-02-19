@@ -23,3 +23,13 @@ function renderStates(liststates) {
     statesGrid.innerHTML = statesHTML;
   }
   
+  function handleSearchState() {
+    const searchInput = document.querySelector('.search-bar');
+    const searchValue = searchInput.value.trim().toLowerCase();
+  
+    const filteredStates = states.filter((state) =>
+      state.title.toLowerCase().includes(searchValue)
+    );
+  
+    renderMovies(filteredStates);
+  }
