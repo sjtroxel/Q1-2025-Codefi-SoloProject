@@ -1,26 +1,51 @@
-main {
-    margin-top: 100px;
-    background-color: aquamarine
+.main {
+    padding: 5px;
+    max-width: 1200px;
+    margin-top: 150px;
+    /* background-color: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.states-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
 }
 
-.card {
+/* .state-container {
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(104,0,255,1) 100%); 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+  } */
+
+.state-container {
     width: 150px;
-    height: 75px;
+    height: 55px;
     margin: 0 auto;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(104,0,255,1) 100%); 
     border-radius: 8px;
     z-index: 1;
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: space-between;   */
 }
    
 .tools {
     display: flex;
     align-items: center;
-    padding: 9px;
+    padding: 3px;
 }
    
 .circle {
-    padding: 0 4px;
+    padding: 0 3px;
 }
    
 .box {
