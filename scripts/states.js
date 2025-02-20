@@ -28,8 +28,8 @@ function renderStates(liststates) {
     const searchValue = searchInput.value.trim().toLowerCase();
   
     const filteredStates = states.filter((state) =>
-      state.title.toLowerCase().includes(searchValue)
+      state.name.toLowerCase().includes(searchValue)
     );
   
-    renderMovies(filteredStates);
+    renderStates(filteredStates);
   }
