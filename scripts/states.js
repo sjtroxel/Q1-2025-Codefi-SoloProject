@@ -28,7 +28,7 @@ function renderStates(liststates) {
     const searchValue = searchInput.value.trim().toLowerCase();
   
     const filteredStates = states.filter((state) =>
-      state.name.toLowerCase().includes(searchValue)
+      state.name.toLowerCase() === (searchValue)
     );
   
     renderStates(filteredStates);
