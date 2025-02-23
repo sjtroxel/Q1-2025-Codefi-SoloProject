@@ -37,8 +37,10 @@ function handleGuessState(states) {
 
         if (s.name.toLowerCase() === searchValue) {
           s.show = true;
+          
         } else console.log("i do work you just dont know what your doing");
       });
+      searchInput.value = "";
     }
     const filteredStates = states.filter((state) => state.show === true);
     renderStates(filteredStates);
