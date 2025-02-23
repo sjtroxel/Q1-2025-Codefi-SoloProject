@@ -1,8 +1,9 @@
 renderStates(states);
 
-setupEventListeners();
+handleGuessState(states)
+// setupEventListeners();
 
-function setupEventListeners() {
-    const searchButton = document.querySelector('.search-icon');
-    searchButton.addEventListener('click', handleSearchState);
-}
+// function setupEventListeners() {
+//     const searchBar = document.querySelector('.search-bar');
+//     searchBar.addEventListener('', () => handleGuessState(states));
+// }
