@@ -5,15 +5,13 @@ function renderStates(liststates) {
         return `
              <div class="state-container">
                      <div class="tools">
+                     <div class="circle">
+                         <span class="green box"></span>
+                       </div>
                        <div class="circle">
                          <span class="red box"></span>
                        </div>
-                       <div class="circle">
-                         <span class="yellow box"></span>
-                       </div>
-                       <div class="circle">
-                         <span class="green box"></span>
-                       </div>
+                       
                      </div>
                      <div class="cardContent">${state.name}
                      </div>

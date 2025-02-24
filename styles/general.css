@@ -32,7 +32,7 @@
 }
    
 .circle {
-    padding: 0 3px;
+    padding: 0 30px;
 }
    
 .box {
@@ -46,10 +46,6 @@
    
 .red {
     background-color: firebrick;
-}
-   
-.yellow {
-    background-color: gold;
 }
    
 .green {
@@ -67,6 +63,7 @@
 }
 
 .favorites-text {
+    background-color: #00ca4e;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 30px;
