@@ -104,4 +104,9 @@
     display: flex;
     justify-content: end;
   }
-  
+
+  .favorites-icon {
+    display: block;
+    height: 50px;
+    margin-top: 5px;
+  }
