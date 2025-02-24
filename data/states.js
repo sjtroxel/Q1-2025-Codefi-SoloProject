@@ -1,5 +1,5 @@
 const states = [
-  { id: 1, name: "Alabama", show: false },
+  { id: 1, name: "Alabama", show: false, favorite: true },
   { id: 2, name: "Alaska", show: false },
   { id: 3, name: "Arizona", show: false },
   { id: 4, name: "Arkansas", show: false },

@@ -65,6 +65,13 @@
     font-weight: 600;
     vertical-align: middle;
 }
+
+.favorites-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
    
 .copyright-footer {
     font-family: Arial, Helvetica, sans-serif;
