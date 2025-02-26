@@ -42,6 +42,8 @@
     height: 18px;
     padding: 1px;
     border-radius: 50%;
+    color: black;
+    font-weight: bolder;
 }
    
 .red {

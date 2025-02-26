@@ -1,22 +1,23 @@
+const favorites = [];
+
 function renderStates(liststates) {
   const statesHTML = liststates
     .map((state) => {
       if (state.show) {
         return `
-             <div class="state-container">
-                     <div class="tools">
-                     <div class="circle">
-                         <button class="green button"></span>
-                       </div>
-                       <div class="circle">
-                         <button class="red button"></span>
-                       </div>
-                       
-                     </div>
-                     <div class="cardContent">${state.name}
-                     </div>
-                   </div>
-                   `;
+              <div class="state-container">
+                      <div class="tools">
+                          <div class="circle">
+                              <button class="green button js-add-to-favorites" data-state-id="${state.id}"></button>
+                          </div>
+                          <div class="circle">
+                              <button class="red button js-delete-from-favorites" data-state-id="${state.id}"></button>
+                          </div>
+                      </div>
+                      <div class="cardContent">${state.name}
+                      </div>
+              </div>
+               `;
       }
     })
     .join("");
@@ -43,6 +44,23 @@ function handleGuessState(states) {
     const filteredStates = states.filter((state) => state.show === true);
     renderStates(filteredStates);
   });
+}
+
+
+function handleAddToFavorites(event) {
+  if (!event.target.classList.contains('js-add-to-favorites')) return;
+
+  const stateId = event.target.dataset.stateId;
+  // const favoritesCount = document.getElementById('js-favorites-count');
+
+  const alreadyFavorite = favorites.some((fav) => fav.stateId === stateId);
+  if (!alreadyFavorite) {
+    favorites.push({ stateId });
+    // favoritesCount.textContent = favorites.length;
+    alert('State added to favorites!');
+  } else {
+    alert('State is already in favorites.');
+  }
 }
 
 // some error handling in this function would be good like returning a message if one doesnt exist 
