@@ -6,10 +6,10 @@ function renderStates(liststates) {
              <div class="state-container">
                      <div class="tools">
                      <div class="circle">
-                         <span class="green box"></span>
+                         <button class="green button"></span>
                        </div>
                        <div class="circle">
-                         <span class="red box"></span>
+                         <button class="red button"></span>
                        </div>
                        
                      </div>
@@ -36,7 +36,7 @@ function handleGuessState(states) {
         if (s.name.toLowerCase() === searchValue) {
           s.show = true;
           
-        } else console.log("i do work you just dont know what your doing");
+        } else '';
       });
       searchInput.value = "";
     }

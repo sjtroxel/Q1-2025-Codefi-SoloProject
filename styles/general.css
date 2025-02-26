@@ -32,24 +32,24 @@
 }
    
 .circle {
-    padding: 0 30px;
+    padding: 0 5px;
 }
    
-.box {
+.button {
     display: inline-block;
     align-items: center;
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     padding: 1px;
     border-radius: 50%;
 }
    
 .red {
-    background-color: firebrick;
+    background-color: red;
 }
    
 .green {
-    background-color: #00ca4e;
+    background-color: #07ca00;
 }
 
 .cardContent {
