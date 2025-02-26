@@ -57,7 +57,7 @@ function handleAddToFavorites(event) {
   if (!alreadyFavorite) {
     favorites.push({ stateId });
     // favoritesCount.textContent = favorites.length;
-    alert('State added to favorites!');
+    alert('State added to favorites!');     // *** add a favorites property to states array like show? ***
   } else {
     alert('State is already in favorites.');
   }
