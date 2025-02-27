@@ -1,6 +1,9 @@
-const favorites = [];
+export let favorites = [];
 
-function renderStates(liststates) {
+// logic and rendering is working for home => favorites. But when hom reloads we are not rendering any saved data. we are rendering the original hardcoded data
+
+
+export function renderStates(liststates) {
   const statesHTML = liststates
     .map((state) => {
       if (state.show) {
@@ -8,7 +11,7 @@ function renderStates(liststates) {
               <div class="state-container">
                       <div class="tools">
                           <div class="circle">
-                              <button class="green button js-add-to-favorites" data-state-id="${state.id}"></button>
+                              <button class="green button js-add-to-favorites" data-state-id="${state.id}" data-state-name="${state.name}"></button>
                           </div>
                           <div class="circle">
                               <button class="red button js-delete-from-favorites" data-state-id="${state.id}"></button>
@@ -22,11 +25,15 @@ function renderStates(liststates) {
     })
     .join("");
 
+    
+
   const statesGrid = document.querySelector(".js-states-grid");
   statesGrid.innerHTML = statesHTML;
+
+  
 }
 
-function handleGuessState(states) {
+export function handleGuessState(states) {
   const searchInput = document.querySelector(".search-bar");
 
   searchInput.addEventListener("keydown", (e) => {
@@ -47,21 +54,37 @@ function handleGuessState(states) {
 }
 
 
-function handleAddToFavorites(event) {
+export function handleAddToFavorites(event) {
   if (!event.target.classList.contains('js-add-to-favorites')) return;
 
-  const stateId = event.target.dataset.stateId;
+  
+  const id = event.target.dataset.stateId;
+  const name = event.target.dataset.stateName
+  const show = true
+  console.log(id, name, show);
+
+  // const favObject = {
+  //   stateId: event.target.dataset.stateId,
+  // stateName:  event.target.dataset.stateName,
+  //  stateShow: true
+  // }
+  // console.log(favObject);
+  
   // const favoritesCount = document.getElementById('js-favorites-count');
 
-  const alreadyFavorite = favorites.some((fav) => fav.stateId === stateId);
+  const alreadyFavorite = favorites.some((fav) => fav.id === id);
   if (!alreadyFavorite) {
-    favorites.push({ stateId });
+    favorites.push({ id, name, show  });
+    localStorage.setItem( 'favorites', JSON.stringify(favorites))
     // favoritesCount.textContent = favorites.length;
     alert('State added to favorites!');     // *** add a favorites property to states array like show? ***
   } else {
     alert('State is already in favorites.');
   }
 }
+
+
+
 
 // some error handling in this function would be good like returning a message if one doesnt exist 
 

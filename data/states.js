@@ -1,4 +1,4 @@
-const states = [
+export const states = [
   { id: 1, name: "Alabama", show: false },
   { id: 2, name: "Alaska", show: false },
   { id: 3, name: "Arizona", show: false },

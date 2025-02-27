@@ -1,3 +1,8 @@
+import { states } from "../data/states.js";
+import {renderStates, handleGuessState, handleAddToFavorites} from "./states.js"
+
+// conditional: if there is something in local storage renderStates(stuff from local strage) otherwise renderstates(original data)
+
 renderStates(states);
 
 handleGuessState(states)
