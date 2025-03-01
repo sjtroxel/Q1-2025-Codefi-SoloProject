@@ -91,14 +91,9 @@ export function handleDeleteFromFavorites(event) {
 
   
   const index = favorites.findIndex((fav) => fav.id === id);
-  
   if (index !== -1) {
-    
     favorites.splice(index, 1);
-
-
     localStorage.setItem('favorites', JSON.stringify(favorites));
-
     alert('State removed from favorites!');
   } else {
     alert('State is not in favorites.');
