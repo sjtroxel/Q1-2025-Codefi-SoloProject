@@ -83,7 +83,27 @@ export function handleAddToFavorites(event) {
   }
 }
 
+export function handleDeleteFromFavorites(event) {
+  if (!event.target.classList.contains('js-delete-from-favorites')) return;
 
+  const id = event.target.dataset.stateId;
+  const name = event.target.dataset.stateName;
+
+  
+  const index = favorites.findIndex((fav) => fav.id === id);
+  
+  if (index !== -1) {
+    
+    favorites.splice(index, 1);
+
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    alert('State removed from favorites!');
+  } else {
+    alert('State is not in favorites.');
+  }
+}
 
 
 // some error handling in this function would be good like returning a message if one doesnt exist 
