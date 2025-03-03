@@ -77,7 +77,7 @@ export function handleAddToFavorites(event) {
     favorites.push({ id, name, show  });
     localStorage.setItem( 'favorites', JSON.stringify(favorites))
     // favoritesCount.textContent = favorites.length;
-    alert('State added to favorites!');     // *** add a favorites property to states array like show? ***
+    alert('State added to favorites!');     
   } else {
     alert('State is already in favorites.');
   }
@@ -99,6 +99,10 @@ export function handleDeleteFromFavorites(event) {
     alert('State is not in favorites.');
   }
 }
+
+
+
+
 
 
 // some error handling in this function would be good like returning a message if one doesnt exist 

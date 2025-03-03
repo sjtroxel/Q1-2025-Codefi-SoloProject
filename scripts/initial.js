@@ -15,7 +15,7 @@ if (statesJSON) {
 
 
 
-renderStates(statesJSON);
+renderStates(states);
 
 handleGuessState(states)
 
